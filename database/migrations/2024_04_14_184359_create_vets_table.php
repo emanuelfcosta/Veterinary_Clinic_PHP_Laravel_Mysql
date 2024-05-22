@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('vets', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email');
-            $table->string('cell_phone');
-            $table->string('address');
-            $table->string('state'); // estado
+            $table->string('email')->nullable();;
+            $table->string('cell_phone')->nullable();;
+            $table->string('address')->nullable();;
+            $table->string('state')->nullable();; // estado
             $table->timestamps();
         });
     }

@@ -12,7 +12,7 @@
         <div class="box box-primary">
                     
             <div class="box-header">
-            <a href="/consultation/new" class="btn btn-success">New Pet</a>
+            <a href="/consultation/new" class="btn btn-success">New Consultation</a>
             </div>
             <br>
 
@@ -40,14 +40,13 @@
                     
                     <tr>
                     <td>{{$consultation->id}}</td>    
-                    <td>{{ \Carbon\Carbon::parse($pet->birth_date)->format('d/m/Y')}}</td>    
+                    <td>{{ \Carbon\Carbon::parse($consultation->the_date)->format('d/m/Y')}}</td>    
                     <td ><img src="{{ asset('storage/' . $consultation->pet->photo_path ) }}" alt="photo" style="max-width: 70%;"></td>
                     <td>{{$consultation->pet->name}}</td>
-                    <td>{{$consultation->client->name}}</td>
-                    <!-- <td><img src="/storage/{{$pet->photo_path}}" alt="photo" style="max-width: 30%;"></td> -->
-                    <!-- <td>{{$pet->photo_path}}</td> -->
+                    <td>{{$consultation->pet->client->name}}</td>
+                    
                     <td>{{$consultation->vet->name}}</td>
-                    <td>{{$consultation->gender}}</td>
+                    <td>{{$consultation->total_cost}}</td>
                     
                     
                   
