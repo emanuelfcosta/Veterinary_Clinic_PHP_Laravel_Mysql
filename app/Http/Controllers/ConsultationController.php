@@ -17,8 +17,18 @@ class ConsultationController extends Controller
     public function index()
     {
        
-        $consultations = Consultation::all();   
+        //$consultations = Consultation::with('pet')->get();  
+
+        $consultations = Consultation::all();  
+       // $consultations = Consultation::with('pet')->get();  
+
+      //  dd($consultations);
         
+       // all()->with('pet');
+
+        // $cons = Consultation::find(3);
+
+        // dd($cons->pet->name);
         
 
         if(isset($consultations)){
@@ -36,7 +46,7 @@ class ConsultationController extends Controller
       $vets = Vet::all();
       $procedures = Procedure::all();
 
-      if(isset($pets) ){
+      if(isset($pets) && isset($vets) && isset($procedures)){
           return view('consultation.new', compact('pets','vets','procedures'));
       }
     }
@@ -46,26 +56,7 @@ class ConsultationController extends Controller
      */
     public function store(Request $request)
     {
-        echo('chegou no store do consultation');
-
       
-
-    //     $array_procedures = json_decode($request->input('memo_procedures'));
-
-    //     foreach ($array_procedures as $value)
-	//    {
-
-    //     echo ( $value->IDPROCEDURE);
-   
-   
-	//    }
-
-
-
-//dd($myArray);
-
-      //  dd($array_procedures);
-
         $thePet = Pet::find($request->input('id_pet'));
         $theVet = Pet::find($request->input('id_vet'));
 
@@ -78,11 +69,6 @@ class ConsultationController extends Controller
          $theConsultation->total_cost = $request->input('total_value');
 
     
-
-         //$theClient->birth_date = date('Y-m-d', strtotime($request->birth_date));
-         //$theClient->salary = $request->input('salary');
- 
- 
          $theConsultation->save();
 
          //for the procedures
@@ -96,18 +82,8 @@ class ConsultationController extends Controller
 
         }
 
-         //$theConsultation->procedures()->attach(1);
-
-
-
          return redirect('/consultation');
-
-    //    $array_procedures = json_decode($request->input('memo_procedures'));
-
-        //dd($array_procedures);
-
-      //  dd($request);
-        //
+ 
     }
 
     /**
@@ -115,7 +91,14 @@ class ConsultationController extends Controller
      */
     public function show(string $id)
     {
-        //
+      
+        $theConsultation = Consultation::find($id);
+
+      if($theConsultation){
+          return view('consultation.show', compact('theConsultation'));
+      }
+
+        
     }
 
     /**
@@ -139,6 +122,10 @@ class ConsultationController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $theConsultation = Consultation::find($id);
+        if(isset($theConsultation)){
+            $theConsultation->delete();
+        }
+        return redirect('/consultation');
     }
 }

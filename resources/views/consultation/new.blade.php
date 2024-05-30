@@ -412,7 +412,7 @@ var i;
                     </button>
 
                   <div class="form-group " >
-                    <input    class="form-control" id="id_vet" name="id_vet"  readonly >
+                    <input hidden    class="form-control" id="id_vet" name="id_vet"  readonly >
                   </div>
 
                   <div class="form-group">
@@ -432,7 +432,7 @@ var i;
                 <div class="box-body">
                  
                   <div class="form-group " >
-                    <input    class="form-control" id="id_pet" name="id_pet"  readonly >
+                    <input hidden   class="form-control" id="id_pet" name="id_pet"  readonly >
                   </div>
 
                   <div class="form-group">
@@ -451,12 +451,12 @@ var i;
 
                   <br>
 
-                  <div class="form-group">
+                  <div hidden class="form-group">
                     <label for="total_value">total value:</label>
-                    <input type="text" class="form-control" id="total_value" name="total_value" readonly  >
+                    <input  type="text" class="form-control" id="total_value" name="total_value" readonly  >
                   </div> 
                   
-                  <div class="form-group ">
+                  <div hidden class="form-group ">
                     <label  for="memo_procedures">Memo procedures:</label>
                     <input type="text" class="form-control" id="memo_procedures" name="memo_procedures" >
                   </div>

@@ -33,6 +33,7 @@
         <a class="nav-link" href="/procedure">Procedures</a>
         <a class="nav-link" href="/vet">Vets</a>
         <a class="nav-link" href="/consultation">Consultation</a>
+        <a class="nav-link" href="/report">Reports</a>
       </div>
     </div>
   </div>
