@@ -10,7 +10,8 @@ This is a system for a veterinary clinic developed in Laravel and MySQL. It was 
 
 ## Run the Project
 In the project folder:
- 1- composer install
- 2- update database credentials in .env file
- 3- php artisan serve
-
+```
+composer install
+update database credentials in .env file
+php artisan serve
+```
