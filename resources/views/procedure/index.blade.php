@@ -4,7 +4,7 @@
 <!-- <h1>Procedimentos</h1> -->
 
 <div class="alert alert-success" role="alert">
-  <h2>Procedimentos</h2>
+  <h2>Procedures</h2>
 </div>
 
 <section class="content">
@@ -14,7 +14,7 @@
         <div class="box box-primary">
                     
             <div class="box-header">
-            <a href="/procedure/new" class="btn btn-success">Novo Procedimento</a>
+            <a href="/procedure/new" class="btn btn-success">New Procedure</a>
             </div>
             <br>
 
@@ -24,8 +24,8 @@
                 <thead>
                     <tr>
                     <th style="width: 10px">#</th>
-                    <th>Nome</th>
-                    <th style="width: 150px">Valor(R$)</th>
+                    <th>Name</th>
+                    <th style="width: 150px">Price($)</th>
                     <th style="width: 250px">&nbsp;</th>
                     
                     

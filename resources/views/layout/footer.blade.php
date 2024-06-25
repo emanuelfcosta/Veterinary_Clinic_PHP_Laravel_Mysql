@@ -8,10 +8,8 @@ $(function () {
       "ordering": true,
       "info": true,
       "autoWidth": false,
-      "responsive": true,
-      "language": {
-            "url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/Portuguese-Brasil.json"
-        }
+      "responsive": true
+     
     });
 
     $('#grid_pet').DataTable({
@@ -21,10 +19,8 @@ $(function () {
       "ordering": true,
       "info": true,
       "autoWidth": false,
-      "responsive": true,
-      "language": {
-            "url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/Portuguese-Brasil.json"
-        }
+      "responsive": true
+     
     });
   });
   
@@ -35,10 +31,10 @@ $(function () {
       "ordering": true,
       "info": true,
       "autoWidth": false,
-      "responsive": true,
-      "language": {
-            "url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/Portuguese-Brasil.json"
-        }
+      "responsive": true
+    //   "language": {
+    //         "url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/Portuguese-Brasil.json"
+    //     }
     });
 
     $('#grid_procedure').DataTable({
@@ -48,10 +44,7 @@ $(function () {
       "ordering": true,
       "info": true,
       "autoWidth": false,
-      "responsive": true,
-      "language": {
-            "url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/Portuguese-Brasil.json"
-        }
+      "responsive": true
     });
   
 

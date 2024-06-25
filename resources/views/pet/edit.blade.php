@@ -140,14 +140,14 @@ close_modal();
                   </div>  
 
                   <div class="form-group">
-                    <label for="height">Altura</label>  
+                    <label for="height">Height</label>  
                     <input type="number" class="form-control" id="height" name="height" step="0.001"  placeholder="0.000" value="{{$thePet->height}}"  >
                   </div>
 
                 
 
                   <div class="form-group">
-                    <label for="weight">Peso</label>  
+                    <label for="weight">Weight</label>  
                     <input type="number" class="form-control" id="weight" name="weight" step="0.001"  placeholder="0.000" value="{{$thePet->weight}}"   >
                   </div>
 

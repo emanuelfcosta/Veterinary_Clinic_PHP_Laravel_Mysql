@@ -35,11 +35,10 @@ class ClientController extends Controller
     {
         $theClient = new Client();
         $theClient->name = $request->input('name');
+        $theClient->email = $request->input('email');
+        $theClient->cell_phone = $request->input('cell_phone');
         $theClient->address = $request->input('address');
         $theClient->state = $request->input('state');
-        //$theClient->birth_date = $request->input('birth_date');
-        $theClient->birth_date = date('Y-m-d', strtotime($request->birth_date));
-        $theClient->salary = $request->input('salary');
 
 
         $theClient->save();
@@ -78,10 +77,10 @@ class ClientController extends Controller
         if(isset($theClient)){
 
             $theClient->name = $request->input('name');
+            $theClient->email = $request->input('email');
+            $theClient->cell_phone = $request->input('cell_phone');
             $theClient->address = $request->input('address');
             $theClient->state = $request->input('state');
-            $theClient->birth_date = date('Y-m-d', strtotime($request->birth_date));
-            $theClient->salary = $request->input('salary');
             
             $theClient->save();
 

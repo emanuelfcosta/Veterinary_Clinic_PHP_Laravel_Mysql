@@ -25,6 +25,8 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Cell phone</th>
+                    <th>Address</th>
+                    <th>State</th>
                     <th style="width: 250px">&nbsp;</th>
                     
                     
@@ -39,6 +41,8 @@
                     <td>{{$vet->name}}</td>
                     <td>{{$vet->email}}</td>
                     <td>{{$vet->cell_phone}}</td>
+                    <td>{{$vet->address}}</td>
+                    <td>{{$vet->state}}</td>
                     
                     
                     <td>

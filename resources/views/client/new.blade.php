@@ -2,41 +2,38 @@
 
 @section('body')
 <div class="alert alert-primary" role="alert">
-  <h2>New Client</h2>
+    <h2>New Client</h2>
 </div>
 <section class="content">
-<div class="row">
-    <div class="col-md-12">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
 
-        <div class="box box-primary">
-                    
-            
-            <br>
+               <br>
+               <div class="box-body no-padding">
+                <form role="form" action="/client" method="post">
+                    @csrf
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required
+                             >
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email" name="email" >
+                        </div>
+                        <div class="form-group">
+                            <label for="cell_phone">CellPhone</label>
+                            <input type="text" class="form-control" id="cell_phone" name="cell_phone" >
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address" name="address" >
+                        </div>
 
-            <div class="box-body no-padding">
-              <form role="form" action="/client" method="post" >
-                @csrf
-                <div class="box-body">
-
-                  <!-- <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" name="name" required  >
-                  </div>     -->
-                  
-                  <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" name="name" required
-                    oninvalid="this.setCustomValidity('Campo requerido')"
-                    onchange="try{setCustomValidity('')}catch(e){}" >
-                  </div>   
-
-                  <div class="form-group">
-                    <label for="address">Address</label>
-                    <input type="text" class="form-control" id="address" name="address" required  >
-                  </div>
-                  
-                  <div class="form-group">
-                    <label>State( states of Brazil):</label>
+                        <div class="form-group">
+                    <label>State(States of Brazil):</label>
                     <select class="form-control" id="state" name="state">
                       <option value="AC">AC</option>
                       <option value="AL">AL</option>
@@ -68,33 +65,24 @@
                     </select>
                   </div>
 
+                    </div>
+                  <br>
+                  <div class="box-footer">
+                    <button type="submit" class="btn btn-success">Save</button>
 
-                  <div class="form-group">
-                    <label for="birth_date">Birthdate</label>
-                    <input type="date" class="form-control" id="birth_date" name="birth_date" required  >
                   </div>
 
-                  <div class="form-group">
-                    <label for="salary">Salary</label>  
-                    <input type="number" class="form-control" id="salary" name="salary" step="0.001" value="0.000" placeholder="0.000" required  >
-                  </div>
-      
-                </div>
-                <!-- /.box-body -->
+                </form>
 
-                <br>
-                <div class="box-footer">
-                  <button type="submit" class="btn btn-success">Save</button>
-                </div>
-              </form>
-                
+
+               </div>
+
+
+
             </div>
-        <!-- /.box-body -->
         </div>
-     </div>
-</div>   
+    </div>
+
 </section>
-
-
 
 @endsection

@@ -24,7 +24,7 @@
                     <th>Pet</th>
                     <th>Client</th>
                     <th>Vet</th>
-                    <th>Total(R$)</th>
+                    <th>Total($)</th>
                     
                    
                     

@@ -49,7 +49,7 @@ close_modal();
                 <td>{{$client->name}}</td>
                 <td>
                   <button type="button" class="btn btn-xs btn-primary" data-toggle="tooltip" data-placement="top"  onclick="add_client_to_pet(this)">
-                    <i class="fa fa-plus"></i> Selecionar
+                    <i class="fa fa-plus"></i> Select
                   </button>
               
                   
@@ -106,7 +106,7 @@ close_modal();
                      
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalClientPet">
-                      Selecionar Cliente
+                      Select Client
                     </button>
 
                   
@@ -134,12 +134,12 @@ close_modal();
                   </div>  
 
                   <div class="form-group">
-                    <label for="height">Altura</label>  
+                    <label for="height">Height</label>  
                     <input type="number" class="form-control" id="height" name="height" step="0.001" value="0.000" placeholder="0.000"  >
                   </div>
 
                   <div class="form-group">
-                    <label for="weight">Peso</label>  
+                    <label for="weight">Weight</label>  
                     <input type="number" class="form-control" id="weight" name="weight" step="0.001" value="0.000" placeholder="0.000"   >
                   </div>
 

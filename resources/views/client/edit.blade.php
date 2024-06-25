@@ -1,34 +1,39 @@
 @extends('layout.main')
 
 @section('body')
-<div class="alert alert-primary" role="alert">
-  <h2>Edit Client</h2>
+<div class="alert alert-warning" role="alert">
+    <h2>Edit Client</h2>
 </div>
 <section class="content">
-<div class="row">
-    <div class="col-md-12">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
 
-        <div class="box box-primary">
-                    
-            
-            <br>
+               <br>
+               <div class="box-body no-padding">
+                <form role="form" action="/client/{{$theClient->id}}" method="post">
+                    @csrf
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" value="{{$theClient->name}}" required
+                             >
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email" name="email" value="{{$theClient->email}}" >
+                        </div>
+                        <div class="form-group">
+                            <label for="cell_phone">Cell Phone</label>
+                            <input type="text" class="form-control" id="cell_phone" name="cell_phone" value="{{$theClient->cell_phone}}" >
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address" name="address" value="{{$theClient->address}}" >
+                        </div>
 
-            <div class="box-body no-padding">
-              <form role="form" action="/client/{{$theClient->id}}" method="post" >
-                @csrf
-                <div class="box-body">
-                  <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" name="name" value="{{$theClient->name}}" required  >
-                  </div>    
-                  
-                  <div class="form-group">
-                    <label for="address">Address</label>
-                    <input type="text" class="form-control" id="address" name="address" value="{{$theClient->address}}" required  >
-                  </div>
-
-                  <div class="form-group">
-                    <label>State( states of Brazil):</label>
+                        <div class="form-group">
+                    <label>State(States of Brazil):</label>
                     <select class="form-control" id="state" name="state">
                     <option value="AC" @if ( $theClient->state  == "AC") {{ 'selected' }} @endif>AC</option>
                     <option value="AL" @if ( $theClient->state  == "AL") {{ 'selected' }} @endif>AL</option>
@@ -63,33 +68,24 @@
                         
                     </select>
                   </div>
+                    </div>
+                  <br>
+                  <div class="box-footer">
+                    <button type="submit" class="btn btn-success">Save</button>
 
-                  <div class="form-group">
-                    <label for="birth_date">Birthdate</label>
-                    <input type="date" class="form-control" id="birth_date" name="birth_date" value="{{$theClient->birth_date}}" required  >
                   </div>
 
-                  <div class="form-group">
-                    <label for="salary">Salary</label>  
-                    <input type="number" class="form-control" id="salary" name="salary" step="0.01"  placeholder="0.00" value="{{$theClient->salary}}"  required  >
-                  </div>
-      
-                </div>
-                <!-- /.box-body -->
+                </form>
 
-                <br>
-                <div class="box-footer">
-                  <button type="submit" class="btn btn-success">Save</button>
-                </div>
-              </form>
-                
+
+               </div>
+
+
+
             </div>
-        <!-- /.box-body -->
         </div>
-     </div>
-</div>   
+    </div>
+
 </section>
-
-
 
 @endsection

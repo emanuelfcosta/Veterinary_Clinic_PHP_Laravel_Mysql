@@ -20,8 +20,8 @@
                 <thead>
                     <tr>
                     <th style="width: 10px">#</th>
-                    <th>Nome</th>
-                    <th style="width: 150px">Valor(R$)</th>
+                    <th>Name</th>
+                    <th style="width: 150px">Price($)</th>
                    
                     
                     

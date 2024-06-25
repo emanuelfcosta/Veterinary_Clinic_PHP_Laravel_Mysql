@@ -23,10 +23,10 @@
                     <tr>
                     <th style="width: 10px">#</th>
                     <th>Name</th>
+                    <th>Email</th>
+                    <th>Cell Phone</th>
                     <th>Address</th>
                     <th>State</th>
-                    <th>Birthdate</th>
-                    <th>Salary</th>
                     <th style="width: 250px">&nbsp;</th>
                     
                     
@@ -39,12 +39,11 @@
                     <tr>
                     <td>{{$client->id}}</td>
                     <td>{{$client->name}}</td>
+                    <td>{{$client->email}}</td>
+                    <td>{{$client->cell_phone}}</td>
                     <td>{{$client->address}}</td>
                     <td>{{$client->state}}</td>
-                    <td>{{ \Carbon\Carbon::parse($client->birth_date)->format('d/m/Y')}}</td>
-                    <td>{{$client->salary}}</td>
                   
-                    
                     <td>
                         <a href="/client/edit/{{$client->id}}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Edit</a>
                         <a href="/client/delete/{{$client->id}}" onclick="return confirm('Do you want to delete this record  id = {{$client->id}}?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Delete</a>
